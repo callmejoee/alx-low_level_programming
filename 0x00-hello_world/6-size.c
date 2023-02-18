@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point 
+ * main - Entry point
  * 
  * Desctiption: 'program to print various sizes'
  *
@@ -28,5 +28,5 @@ int main(void)
 	printf("Size of a float: %d byte(s)\n", float_num);
 
 	/* Return and end */
-	return(0);
+	return (0);
 }
