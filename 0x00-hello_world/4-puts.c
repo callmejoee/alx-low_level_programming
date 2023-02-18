@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-/** main - Entry point and start of the program
- *
- *
+/* 
+ * main - Entry point and start of the program
  *
  * Description: 'This is a program to print the line;
- *
  *
  * Return: Always 0 (Success)
  *
