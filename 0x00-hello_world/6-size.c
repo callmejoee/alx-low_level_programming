@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * 
+ *
  * Desctiption: 'program to print various sizes'
  *
  * Return: Always 0 (Success)
