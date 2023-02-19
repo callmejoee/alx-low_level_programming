@@ -18,7 +18,7 @@ int main(void)
 	for (i = 0; i <= end; i++)
 	{
 		if (start == 'q' || start == 'e')
-			break;
+			continue;
 		putchar(start);
 		start++;
 	}
