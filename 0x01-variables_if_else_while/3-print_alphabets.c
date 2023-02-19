@@ -16,7 +16,6 @@ int main(void)
 	start_c = 'A';
 	start = 'a';
 	end = 'z' - 'a';
-	end_c = 'Z' - 'A';
 	for (i = 0; i <= end; i++)
 	{
 		putchar(start);
