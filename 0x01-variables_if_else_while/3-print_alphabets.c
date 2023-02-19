@@ -11,7 +11,7 @@
 int main(void)
 {
 	char start,start_c;
-	int end, i;
+	int end, end_c, i;
 
 	start_c = 'A';
 	start = 'a';
