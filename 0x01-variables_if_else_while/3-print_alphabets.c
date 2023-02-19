@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char start,start_c;
+	char start, start_c;
 	int end, end_c, i, j;
 
 	start_c = 'A';
