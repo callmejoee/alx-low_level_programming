@@ -22,7 +22,7 @@ int main(void)
 	printf("Last digit of %d is %d", n, last_digit);
 
 	/* Print the other part of the string */
-	
+
 	if (last_digit == 0)
 		printf(" and is 0\n");
 	else if (last_digit > 5)
