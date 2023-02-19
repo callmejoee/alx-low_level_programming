@@ -18,7 +18,10 @@ int main(void)
 	for (i = 0; i <= end; i++)
 	{
 		if (start == 'q' || start == 'e')
+		{
+			start++;
 			continue;
+		}
 		putchar(start);
 		start++;
 	}
