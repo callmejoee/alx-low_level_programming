@@ -15,7 +15,7 @@ int main(void)
 
 	start = 'a';
 	end = 'z' - 'a';
-	for (i = 0; i < end; i++)
+	for (i = 0; i = end; i++)
 	{
 		putchar(start);
 		start++;
