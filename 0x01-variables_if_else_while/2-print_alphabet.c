@@ -11,11 +11,11 @@
 int main(void)
 {
 	char start;
-	int end;
+	int end, i;
 
 	start = 'a';
 	end = 'z' - 'a';
-	for (int i = 0; i < end; i++)
+	for (i = 0; i < end; i++)
 	{
 		putchar(start);
 		start++;
