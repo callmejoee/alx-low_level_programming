@@ -1,20 +1,28 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Descritpion: 'Program to know if number is negative'
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
+	/* Check number */
 	if (n > 0)
-		printf("%s", "is positive");
+		printf("%n is positive", n);
 	else if (n < 0)
-		printf("%s", "is negative");
+		printf("%d is negative", n);
 	else
-		printf("%s", "is zero");
+		printf("%d is zero", n);
+
 	return (0);
 }
