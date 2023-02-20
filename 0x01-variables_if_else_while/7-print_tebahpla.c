@@ -18,7 +18,8 @@ int main(void)
 
 	for (i = letters; i <= 0; i--)
 	{
-		putchar(start++);
+		putchar(start);
+		start++;
 	}
 	putchar('\n');
 
