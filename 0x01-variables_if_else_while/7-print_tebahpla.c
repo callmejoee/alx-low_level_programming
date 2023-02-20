@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char start, end;
+	char start;
 	int letters, i;
 
 	start = 'z';
