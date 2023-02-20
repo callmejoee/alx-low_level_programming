@@ -12,7 +12,6 @@
 int main(void)
 {
 	int i;
-	char ch;
 
 	for (i = 0; i <= 9; i++)
 	{
