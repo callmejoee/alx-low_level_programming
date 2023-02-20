@@ -14,7 +14,6 @@ int main(void)
 	int letters, i;
 
 	start = 'z';
-	end = 'a';
 	letters = 'z' - 'a';
 
 	for (i = letters; i <= 0; i--)
