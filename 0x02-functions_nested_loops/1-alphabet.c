@@ -22,9 +22,9 @@ void print_alphabet(void)
 
 	for (i = 0; i <= 26; i++)
 	{
-		putchar(i+'a');
+		_putchar(i+'a');
 	}
 
-	putchar('\n');
+	_putchar('\n');
 
 }
