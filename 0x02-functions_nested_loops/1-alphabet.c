@@ -1,21 +1,25 @@
 #include "main.h"
 
 /**
- *@brief: Function
+ * print_alphabet - prints alphabet
  *
- * @param: none
+ * Description: function
  *
- * @return: void
- * 
+ * Return: Always void
  */
+
+int main(void)
+{
+	return (0);
+}
 
 void print_alphabet(void)
 {
 	int i;
 
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= 26; i++)
 	{
-		_putchar(i + 'a');
+		_putchar(i+'a');
 	}
 
 	_putchar('\n');
