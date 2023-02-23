@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * Print - Function
  *
- * Description: function 
+ * Description: function
  *
- * Return: Always (0);
+ * Return: void;
  */
-
 
 void print_alphabet(void)
 {
 	int i;
 
-	for (i = 0; i <= 26; i++)
+	for (i = 0; i <= 25; i++)
 	{
-		_putchar(i+'a');
+		_putchar(i + 'a');
 	}
 
 	_putchar('\n');
 
-}
+ }
