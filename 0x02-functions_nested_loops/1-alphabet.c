@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,8 +7,6 @@
  *
  * Return: Always (0);
  */
-
-void print_alphabet(void);
 
 int main(void)
 {
@@ -22,9 +19,9 @@ void print_alphabet(void)
 
 	for (i = 0; i <= 26; i++)
 	{
-		putchar(i+'a');
+		_putchar(i+'a');
 	}
 
-	putchar('\n');
+	_putchar('\n');
 
 }
