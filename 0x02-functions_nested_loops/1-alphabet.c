@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * Print - Function
+ *@brief: Function
  *
- * Description: function
+ * @param: none
  *
- * Return: void;
+ * @return: void
+ * 
  */
 
 void print_alphabet(void)
@@ -19,4 +20,4 @@ void print_alphabet(void)
 
 	_putchar('\n');
 
- }
+}
