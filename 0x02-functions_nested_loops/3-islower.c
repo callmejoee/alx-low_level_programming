@@ -2,7 +2,7 @@
 
 /**
  * _islower - function to check if charachter is low
- * Parameters - c character
+ * @param c character
  * Return - 1 if lower 0 if not
  */
 
