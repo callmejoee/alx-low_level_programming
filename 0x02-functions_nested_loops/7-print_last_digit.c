@@ -5,12 +5,16 @@
  * 
  * @n - the number to check for the last digit
  * 
+ * @l - last digit
  *
  * Return: last digit
  */
 
 int print_last_digit(int n)
 {
-	_getchar(n % 10);
+	int l;
+
+	l = (n % 10);
+	_getchar(l);
 	return (n % 10);
 }
