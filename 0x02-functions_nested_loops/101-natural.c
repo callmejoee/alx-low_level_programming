@@ -4,6 +4,8 @@
  * main - entry point
  *
  * Description: sum
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -20,6 +22,6 @@ int main(void)
 		sum += three;
 
 	}
-
+	printf("%d", sum);
 	return (0);
 }
