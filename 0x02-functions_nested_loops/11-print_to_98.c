@@ -16,5 +16,5 @@ void print_to_98(int n)
 	if (n == 98)
 		return;
 	else
-		print_to_98(n+1)
+		print_to_98(n+1);
 }
