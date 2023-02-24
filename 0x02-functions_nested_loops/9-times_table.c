@@ -25,10 +25,10 @@ void times_table(void)
 				_putchar(ans + '0');
 				_putchar(' ');
 			}
+			_putchar(' ');
+			_putchar(',');
+			_putchar(ans + '0');
 		}
-		_putchar(' ');
-		_putchar(',');
-		_putchar(ans + '0');
 		_putchar('\n');
 	}
 }
