@@ -32,7 +32,13 @@ void print_times_table(int n)
                                 _putchar(',');
                                 _putchar(' ');
                                 _putchar(' ');
-                                _putchar((ans / 100) + '0');
+				n = ans;
+
+				while (n > 10)
+				{
+					n = n / 10;
+				}
+                                _putchar(n + '0');
                                 _putchar((ans / 10) + '0');
                                 _putchar((ans % 10) + '0');
                         }
