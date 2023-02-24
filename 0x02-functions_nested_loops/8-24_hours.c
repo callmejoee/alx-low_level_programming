@@ -24,6 +24,7 @@ void jack_bauer(void)
 		{
 			minutes = 00;
 			hours++;
+			continue;
 		}
 		minutes++;
 	}
