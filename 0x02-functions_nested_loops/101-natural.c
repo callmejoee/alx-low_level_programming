@@ -15,11 +15,9 @@ int main(void)
 	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3)
-			three = i;
+			sum += i;
 		else if (i % 5)
-			five = i;
-		sum += five;
-		sum += three;
+			sum += i;
 
 	}
 	printf("%d", sum);
