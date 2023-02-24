@@ -19,15 +19,7 @@ void print_times_table(int n)
 		for (j = 1; j <= n; j++)
 		{
 			ans = i * j;
-			if (ans > 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar((ans / 10) + '0');
-				_putchar((ans % 10) + '0');
-			}
-			else if (ans > 99)
+			if (ans > 99)
                         {
                                 _putchar(',');
                                 _putchar(' ');
@@ -35,6 +27,14 @@ void print_times_table(int n)
                                 _putchar((ans / 10) + '0');
                                 _putchar((ans % 10) + '0');
                         }
+			else if (ans > 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar((ans / 10) + '0');
+				_putchar((ans % 10) + '0');
+			}
 			else
 			{
 				_putchar(',');
