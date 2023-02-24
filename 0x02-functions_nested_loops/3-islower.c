@@ -2,8 +2,8 @@
 
 /**
  * _islower - function to check if charachter is low
- * @param c character
- * Return - 1 if lower 0 if not
+ * @c:  character to be checked
+ * Return: 1 if lower 0 if not
  */
 
 int _islower(int c)
