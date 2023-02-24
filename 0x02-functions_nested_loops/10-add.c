@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * add  - function to 
- * 
+ * add  - function to
+ *
  * @num1: number 1
  * @num2: number 2
- * 
+ *
  * Return: sum
  */
 
