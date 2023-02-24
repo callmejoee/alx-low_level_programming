@@ -2,7 +2,7 @@
 
 /**
  * times_table - function to print the multplication table
- * 
+ *
  * Return: void
  */
 void times_table(void)
@@ -21,10 +21,11 @@ void times_table(void)
 			}
 			else
 				_putchar(ans + '0');
-			
+
 			_putchar(',');
-			_putchar(' ');	
 			_putchar(' ');
+			_putchar(' ');
+			_putchar('\n');
 		}
 	}
 }
