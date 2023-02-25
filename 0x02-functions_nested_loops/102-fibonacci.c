@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * fib - Entry point
+ *
+ * @n: number
  *
  * Description: Fibonacci Sequence
  *
@@ -15,7 +17,7 @@ int fib(int n)
 	{
 		return (n);
 	}
-	return fib(n - 1) + fib(n + 2);
+	return (fib(n - 1) + fib(n - 2));
 }
 
 int main(void)
