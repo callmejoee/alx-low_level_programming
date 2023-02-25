@@ -10,7 +10,6 @@
 
 int fib(int n)
 {
-	int i;
 
 	if (n <= 1)
 	{
