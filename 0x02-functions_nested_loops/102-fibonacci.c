@@ -11,13 +11,17 @@
  */
 int main(void)
 {
-	int i;
+	int i, first, second, third;
 
-	printf("1, ");
-	printf("2, ");
-	for (i = 0; i <= 50; i++)
+	first = 1;
+	second = 2;
+	printf("1, 2, ");
+	for (i = 0; i < 50; i++)
 	{
-		printf("%d, ", ((i + 1) + i));
+		third = first + second;
+		printf("%d, ", third);
+		first = second;
+		second = third;
 	}
 	putchar('\n');
 	return (0);
