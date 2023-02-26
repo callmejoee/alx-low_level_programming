@@ -21,10 +21,10 @@ int main(void)
 			printf("Fizz ");
 		else if (i == 100)
 			printf("%d", i);
-		else 
+		else
 			printf("%d ", i);
 	}
-	putchar('\n');
+	printf("\n");
 
 	return (0);
 }
