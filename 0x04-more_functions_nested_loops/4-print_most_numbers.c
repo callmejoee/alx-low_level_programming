@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - function to multiply
+ * print_most_numbers - function to multiply
  * Return: void
  *
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
