@@ -8,7 +8,7 @@
 
 void more_numbers(void)
 {
-	short unsigned int i, j;
+	unsigned short int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
