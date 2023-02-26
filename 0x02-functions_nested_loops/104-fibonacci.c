@@ -11,7 +11,7 @@
 int main(void)
 {
 	int i;
-	unsigned long long int first, second, third;
+	unsigned long int first, second, third;
 
 	first = 1;
 	second = 2;
@@ -20,9 +20,9 @@ int main(void)
 	{
 		third = first + second;
 		if (i != 95)
-			printf("%lld, ", third);
+			printf("%ld, ", third);
 		else
-			printf("%lld", third);
+			printf("%ld", third);
 		first = second;
 		second = third;
 	}
