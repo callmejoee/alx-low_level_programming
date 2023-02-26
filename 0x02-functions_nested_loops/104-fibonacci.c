@@ -20,9 +20,9 @@ int main(void)
 	{
 		third = first + second;
 		if (i != 95)
-			printf("%ld, ", third);
+			printf("%lld, ", third);
 		else
-			printf("%ld", third);
+			printf("%lld", third);
 		first = second;
 		second = third;
 	}
