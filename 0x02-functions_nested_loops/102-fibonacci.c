@@ -13,9 +13,11 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 50; i++)
+	printf("1, ");
+	printf("2, ");
+	for (i = 0; i <= 50; i++)
 	{
-		printf("%d, %d", i-1, i);
+		printf("%d, ", i-1 + i);
 	}
 	putchar('\n');
 	return (0);
