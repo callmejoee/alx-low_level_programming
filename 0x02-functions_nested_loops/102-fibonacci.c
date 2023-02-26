@@ -19,7 +19,7 @@ int main(void)
 	for (i = 0; i < 48; i++)
 	{
 		third = first + second;
-		if (i != 48)
+		if (i != 47)
 			printf("%ld, ", third);
 		else
 			printf("%ld", third);
