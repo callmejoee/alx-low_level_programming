@@ -16,14 +16,16 @@ int main(void)
 	first = 1;
 	second = 2;
 	printf("1, 2, ");
-	for (i = 0; i < 47; i++)
+	for (i = 0; i < 48; i++)
 	{
 		third = first + second;
-		printf("%ld, ", third);
+		if (i != 48)
+			printf("%ld, ", third);
+		else
+			printf("%ld", third);
 		first = second;
 		second = third;
 	}
-	printf("%ld", third);
 	putchar('\n');
 	return (0);
 }
