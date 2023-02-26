@@ -11,15 +11,16 @@
  */
 int main(void)
 {
-	int i, first, second, third;
+	int i;
+       	long int first, second, third;
 
 	first = 1;
 	second = 2;
 	printf("1, 2, ");
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		third = first + second;
-		printf("%d, ", third);
+		printf("%ld, ", third);
 		first = second;
 		second = third;
 	}
