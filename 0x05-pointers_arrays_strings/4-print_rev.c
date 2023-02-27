@@ -21,6 +21,7 @@ void print_rev(char *s)
 		temp = *beg;
 		*beg = *end;
 		*end = temp;
+		_putchar(*beg);
 		beg++;
 		end--;
 	}
