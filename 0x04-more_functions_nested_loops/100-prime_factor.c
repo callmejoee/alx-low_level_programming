@@ -8,18 +8,6 @@
  * Return: Always 0
  */
 
-void prime_numbers(int num);
-
-int main(void)
-{
-	long int num;
-
-	num = 612852475143;
-	prime_numbers(num);
-
-	return (0);
-}
-
 void prime_numbers(int num)
 {
 	int count;
@@ -33,4 +21,13 @@ void prime_numbers(int num)
 		}
 	}
 	printf("\n");
+}
+int main(void)
+{
+	long int num;
+
+	num = 612852475143;
+	prime_numbers(num);
+
+	return (0);
 }
