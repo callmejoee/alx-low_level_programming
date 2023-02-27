@@ -16,9 +16,8 @@ void prime_numbers(long int num)
 	{
 		while (num % count == 0)
 		{
-			printf("%ld", count);
+			printf("%ld\n", count);
 			num /= count;
-			printf("\n");
 		}
 	}
 }
