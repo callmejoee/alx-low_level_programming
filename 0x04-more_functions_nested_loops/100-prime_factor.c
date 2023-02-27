@@ -1,34 +1,36 @@
-#include<stdio.h>  
+#include <stdio.h>
 
 /**
- * prime_factors - program to print;
+ * prime_numbers - print prime numbers
  *
- * @num: number to check
+ * @num: number
  *
  * Return: Always 0
  */
 
-void prime_factors(int num)  
-{  
-	int count;  
-  
-	for(count = 2; num > 1; count++)  
-	{  
-		while(num % count == 0)  
-		{  
-			printf("%d ", count);  
-			num = num / count;  
-		}  
-	}  
-	printf("\n");  
-}  
-  
-int main()  
-{  
-	int num;  
-  
- 	num = 612852475143; 
-	primefactors(num);  
-  
-	return 0;  
+void prime_numbers(int num);
+
+int main(void)
+{
+	long int num;
+
+	num = 612852475143;
+	prime_numbers(num);
+
+	return (0);
+}
+
+void prime_numbers(int num)
+{
+	int count;
+
+	for (count = 2; num > 1; count++)
+	{
+		while (num % count == 0)
+		{
+			printf("%d,", count);
+			num /= count;
+		}
+	}
+	printf("\n");
 }
