@@ -20,7 +20,7 @@ void print_rev(char *s)
 	{
 		temp = *beg;
 		*beg = *end;
-		*end = *beg;
+		*end = temp;
 		beg++;
 		end--;
 	}
