@@ -8,19 +8,19 @@
  * Return: Always 0
  */
 
-void prime_numbers(int num)
+void prime_numbers(long int num)
 {
-	int count;
+	long int count;
 
 	for (count = 2; num > 1; count++)
 	{
 		while (num % count == 0)
 		{
-			printf("%d,", count);
+			printf("%ld", count);
 			num /= count;
+			printf("\n");
 		}
 	}
-	printf("\n");
 }
 int main(void)
 {
