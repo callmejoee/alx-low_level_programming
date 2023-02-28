@@ -21,10 +21,11 @@ char *_strcpy(char *dest, char *src)
 		src++;
 
 	}
-	if ( *src == '\0')
+	if (*src == '\0')
 	{
 		*(dest + i) = *(src);
 		return (d);
+	}
 	*(dest + i) = *(src  + i);
 
 	return (d);
