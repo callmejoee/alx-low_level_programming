@@ -22,7 +22,9 @@ char *_strcpy(char *dest, char *src)
 
 	}
 	if ( *src == '\0')
+	{
 		*(dest + i) = *(src);
+		return (d);
 	*(dest + i) = *(src  + i);
 
 	return (d);
