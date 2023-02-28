@@ -11,11 +11,10 @@ void print_array(int *a, int n)
 {
 	int i;
 
-
-	for (i = 0; i < n - 1; i++)
+	if (sizeof(a)/sizeof(int) == 1)
 	{
-		while (isdigit((*(a + i))))
-		{		
+		for (i = 0; i < n - 1; i++)
+		{
 			printf("%d, ", (*(a + i)));
 		}
 	}
