@@ -5,6 +5,7 @@
  *
  * @dest: dest
  * @src: source
+ * Return: pointer
  */
 
 char *_strcpy(char *dest, char *src)
@@ -15,10 +16,11 @@ char *_strcpy(char *dest, char *src)
 	d = dest;
 	for (i = 0; *src != '\0'; i++)
 	{
+		src += i;
 		*(dest + i) = *(src + i);
-		src++;
+		
 	}
 	*(dest + i) = *(src + i);
-	
+
 	return (d);
 }
