@@ -11,7 +11,7 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	if (sizeof(a)/sizeof(int) == 1)
+	if (sizeof(a) / sizeof(int) == n)
 	{
 		for (i = 0; i < n - 1; i++)
 		{
