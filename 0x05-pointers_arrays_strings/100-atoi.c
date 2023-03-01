@@ -12,8 +12,9 @@ int _atoi(char *s)
 {
 	int sign, i, len, num;
 	char digit;
-	bool isdigit;
+	int isdigit;
 
+	isdigit = 0;
 	len = strlen(s);
 	num = 0;
 	for (i = 0; i < len; i++)
@@ -35,11 +36,12 @@ int _atoi(char *s)
 			num *= 10;
 			num += digit - '0';
 			num *= sign;
-			return num;
 		}
 
 	}
 	if (isdigit == 0) {
 		return (0);
 	}
+
+	return num;
 }
