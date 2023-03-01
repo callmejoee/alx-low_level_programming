@@ -29,10 +29,11 @@ int _atoi(char *s)
 		}
 		if (isdigit(*s))
 		{
-			 num *= 10;
-			 num += s - '0';
-			 num *= sign;
-			 return num;
+			digit = *s;
+			num *= 10;
+			num += digit - '0';
+			num *= sign;
+			return num;
 		}
 		else
 			return (0);
