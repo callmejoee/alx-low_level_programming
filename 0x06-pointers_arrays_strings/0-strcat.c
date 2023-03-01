@@ -11,22 +11,23 @@
 
 char *_strcat(char *dest, char *src)
 {
-	// define where the null character in dest is then add src in that place
-	int i;
-	char *start, *nul_char;
+	int counter;
+	char *start;
 
 	start = dest;
+	counter = 0;
 	while (*start != '\0')
 	{
 		start++;
+		counter++;
 	}
-	nul_char = start + 1;
-	for (i = 0; *src != '\0'; i++)
+	while (*src != '\0')
 	{
-		*nul_char = *src;
-		nul_char++;
+		*start = *src;
+		start++;
 		src++;
+		if (*(src + 1) == '\0')
+			*(start + 1) = *(src + 1);
 	}
-
-	return dest;
+	return (dest);
 }
