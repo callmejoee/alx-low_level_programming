@@ -6,6 +6,7 @@
  * @dest: destination
  * @src: source
  * @n: number of bytes
+ *
  * Return: pointer of type char
  */
 
