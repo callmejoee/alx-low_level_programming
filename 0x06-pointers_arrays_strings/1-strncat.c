@@ -3,6 +3,7 @@
 /**
  * _strncat - function to concatenate two strings
  *
+ * Description: function
  * @dest: destination
  * @src: source
  * @n: number of bytes
