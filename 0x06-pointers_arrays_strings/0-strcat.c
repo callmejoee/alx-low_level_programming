@@ -11,23 +11,29 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int counter;
-	char *start;
+	int i, len;
+	char *dest_copy;
 
-	start = dest;
-	counter = 0;
-	while (*start != '\0')
+	printf("pointer dest is %p\n", dest);
+	printf("pointer src is %p\n", src);
+	dest_copy = dest;
+	printf("pointer dest copy is %p\n", dest_copy);
+	while (*dest_copy != '\0')
 	{
-		start++;
-		counter++;
+		len++;
+		dest_copy++;
 	}
-	while (*src != '\0')
+
+	printf("pointer dest copy is %p\n", dest_copy);
+	printf("length is %d\n", len);
+	for (i = 0; *src != '\0'; i++)
 	{
-		*start = *src;
-		start++;
+		*(dest_copy) = *(src);
+		dest_copy++;
 		src++;
-		if (*(src + 1) == '\0')
-			*(start + 1) = *(src + 1);
 	}
+
+	printf("pointer  after assignment dest is %p\n", dest);
+	printf("pointer assignment src is %p\n", src);
 	return (dest);
 }
