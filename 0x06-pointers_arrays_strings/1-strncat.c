@@ -7,7 +7,7 @@
  * @src: source pointer
  * @n: num of bytes
  *
- * Return: pointer of type char
+ * Return: @dest
  *
  */
 
