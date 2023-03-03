@@ -12,7 +12,7 @@ char *cap_string(char *n)
 	i = 0;
 	while (*(n + i) != '\0')
 	{
-		if (i == 0 && isalpha(*n) && !isupper(*(n)))
+		if (i == 0 && !isupper(*n))
 		{
 			*n -= 32;
 		}
