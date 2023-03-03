@@ -9,11 +9,13 @@ char *cap_string(char *n)
 {
 	char *start;
 
+	start = n;
 	while (*n != '\0')
 	{
 		if (!isdigit(*n) && !isalpha(*n))
 		{
 			*(n + 1) -= 32;
 		}
+	}
 	return (start);
 }
