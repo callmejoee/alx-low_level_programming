@@ -5,26 +5,26 @@
  * @n: n strung
  * Return: pointer to hcar
  */
+
 char *cap_string(char *n)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
 	while (n[i] != '\0')
 	{
-		if (n[i] >= 97 && n[i] <= 122)
+		if (isalpha(n[i]))
 		{
-			if (i == 0 && !isupper(n[0]))
-			{
-				*n -= 32;
-			}
-			else if (*(n + 1) == ',' || *(n + 1) == ';' || *(n + 1) == '.' ||
-				 *(n + 1) == '!' || *(n + 1) == '?' || *(n + 1) == '"' ||
-				 *(n + 1) == '(' || *(n + 1) == ')' || *(n + 1) == '{' || *(n + 1) == '}')
-				*(n + i) -= 32;
+			if (isupper(n[i]))
+				continue;
+
+			else if (n[i] == 0)
+				n[i] -= 32;
+
+			else if (n[i - 1] == ',' || n[i - 1] == ';' || n[i - 1] == '.' ||
+				 n[i - 1] == '!' || n[i - 1] == '?' || n[i - 1] == '"' ||
+				 n[i - 1] == '(' || n[i - 1] == ')' || n[i - 1] == '{' || n[i - 1] == '}')
+				n[i] -= 32;
 		}
-		else if (n[i] >= 65 && n[i] <= 90)
-			continue;
 		i++;
 	}
 	return (n);
