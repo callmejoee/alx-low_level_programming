@@ -7,15 +7,21 @@
  */
 char *cap_string(char *n)
 {
-	char *start;
+	int i;
 
-	start = n;
-	while (*n != '\0')
+	i = 0;
+	/* if first character si alpha capitalize and then check check every character 
+	 * and if n is alpha and the previous is punc or blank */
+	while (*(n + i) != '\0')
 	{
-		if (!isdigit(*n) && !isalpha(*n))
+		if (i == 0 && isalpha(*n) && !isalpha(*(n)))
 		{
-			*(n + 1) -= 32;
+			*n -= 32;
 		}
+		else if (isalpha(*(n + i)) && !isupper(*(n + i)) && !isalpha(*(n + i - 1)))
+			*(n + i) -= 32;
+
+		i++;
 	}
-	return (start);
+	return (n);
 }
