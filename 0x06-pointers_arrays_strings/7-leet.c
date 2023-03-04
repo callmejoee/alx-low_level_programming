@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * leet - encode text to leet
  *
  * @s: string
@@ -10,7 +10,8 @@
 
 char *leet(char *s)
 {
-	/* for loop  to the end of the string
+	/**
+	 * for loop  to the end of the string
 	 * save the numbers in an array like this a4e3
 	 * if array[i] == s[j] then change the letter
 	 * and increment i with 2 and j with 1
@@ -26,7 +27,7 @@ char *leet(char *s)
 		{
 			if (arr[j] == s[i])
 			{
-				s[i] = arr[j+1];
+				s[i] = arr[j + 1];
 			}
 		}
 	}
