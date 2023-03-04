@@ -1,27 +1,33 @@
-#include "main.h"
-
 /**
- * cap_string - converts all input char to upper
- * @n: n strung
- * Return: pointer to hcar
- */
-char *cap_string(char *n)
-{
-	int i;
+ * cap_string - a function that capitalizes
+ *              all words of a string
+ *
+ * @s: pointer to char input array
+ *
+ * Return: @s
+*/
 
-	i = 0;
-	while (n[i] != '\0')
+char *cap_string(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
 	{
-		if (n[i] >= 97 && n[i] <= 122)
+		if (s[i] >= 97 && s[i] <= 122)
 		{
 			if (i == 0)
-				*n -= 32;
-			else if (*(n + 1) == ',' || *(n + 1) == ';' || *(n + 1) == '.' ||
-				 *(n + 1) == '!' || *(n + 1) == '?' || *(n + 1) == '"' ||
-				 *(n + 1) == '(' || *(n + 1) == ')' || *(n + 1) == '{' || *(n + 1) == '}')
-				*(n + i) -= 32;
+				s[i] -= 32;
+			}
+			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 ||
+				s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46 ||
+				s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34 ||
+				s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123 ||
+				s[i - 1] == 124)
+			{
+				s[i] -= 32;
+			}
 		}
 		i++;
 	}
-	return (n);
+	return (s);
 }
