@@ -1,3 +1,6 @@
+#include "main.h"
+
+
 /**
  * cap_string - converts all input char to upper
  *
@@ -7,23 +10,25 @@
  *
  */
 
-char *cap_string(char *n)
+char *cap_string(char *n) 
 {
-		int i;
+	int i = 0;
 
-		i = 0;
-		while (n[i] != '\0')
+	while (n[i] != '\0')
+	{
+		if (islower(n[i]))
 		{
-				if (n[i] >= 97 && n[i] <= 122)
-				{
-						if (i == 0)
-								n[i] -= 32;
-						else if (n[i - 1] == ',' || n[i - 1] == ';' || n[i - 1] == '.' ||
-								 n[i - 1] == '!' || n[i - 1] == '?' || n[i - 1] == '"' ||
-								 n[i - 1] == '(' || n[i - 1] == ')' || n[i - 1] == '{' || n[i - 1] == '}')
-								n[i] -= 32;
-				}
-				i++;
+			if(i == 0)
+				n[i] -= 32;
+			else if (n[i - 1] == ' ' || n[i - 1] == ',' || n[i - 1] == '.' || n[i - 1] == '"'
+				 || n[i - 1] == '!' || n[i - 1] == '?' || n[i - 1] == '{' || n[i - 1] == '}'
+				 || n[i - 1] == '(' || n[i - 1] == '}')
+			{
+				n[i] -= 32;
+			}
 		}
-		return (n);
+
+	}
+	i++;
+	return (n);
 }
