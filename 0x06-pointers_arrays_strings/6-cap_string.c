@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
  * cap_string - converts all input char to upper
