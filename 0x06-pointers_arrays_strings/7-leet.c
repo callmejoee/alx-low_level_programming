@@ -11,23 +11,25 @@
 char *leet(char *s)
 {
 	/**
-	 * for loop  to the end of the string
-	 * save the numbers in an array like this a4e3
-	 * if array[i] == s[j] then change the letter
-	 * and increment i with 2 and j with 1
-	 * return s
+	 * for loop on the string entered
+	 * for loop on the dictionary that i have
+	 * make the number into lower form
+	 * if the array equals the dict set the charachter to dic + 1
+	 * increment dic by 2
 	 */
 	int i, j;
-	char arr[] = "a4e3o0t7l1";
+	char temp;
+	char dic[] = "a4e3o0t7l1";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		j = 0;
-		for (j = 0; arr[j] != '\0'; j++)
+		for (j = 0; dic[j] != '\0'; j += 2)
 		{
-			if (arr[j] == s[i])
+			temp = tolower(s[i]);
+
+			if (dic[j] == temp)
 			{
-				s[i] = arr[j + 1];
+				s[i] = dic[j + 1];
 			}
 		}
 	}
