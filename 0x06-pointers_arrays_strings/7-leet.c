@@ -16,17 +16,17 @@ char *leet(char *s)
 	 * and increment i with 2 and j with 1
 	 * return s
 	 */
-	int i;
-	char array[9];
+	int i, j;
+	char arr[] = "a4e3o0t7l1";
 
-	array = "a4e3o0t7l1";
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; array[j] != '\0'; j++)
+		j = 0;
+		for (j = 0; arr[j] != '\0'; j++)
 		{
-			if (array[j] == s[i])
+			if (arr[j] == s[i])
 			{
-				s[i] = array[j+1];
+				s[i] = arr[j+1];
 			}
 		}
 	}
