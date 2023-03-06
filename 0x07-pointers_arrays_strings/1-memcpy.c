@@ -1,10 +1,10 @@
-#include "main.h" 
+#include "main.h"
 
 /**
  * _memcpy - function to copy
  *
  * @dest: dest
- *
+ * @n: number
  * @src: source
  *
  * Return: @dest
