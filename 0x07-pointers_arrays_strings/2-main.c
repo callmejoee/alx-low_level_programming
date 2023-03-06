@@ -11,7 +11,7 @@ int main(void)
     char *s = "hello i gueess my name is youssef and i am happy to meet you ";
     char *f;
 
-    f = _strchr(s, 'x');
+    f = _strchr(s, 'y');
 
     if (f != NULL)
     {
