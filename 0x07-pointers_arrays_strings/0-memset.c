@@ -1,13 +1,13 @@
-#include "main.h" 
+#include "main.h"
 
 /**
- * memset - function to set the mem with charac
+ * _memset - function to set the mem with charac
  *
  * @s: string pointer
  *
  * @b: character to be copied
  *
- * @n: number of times 
+ * @n: number of times
  *
  * Return: @s
  */
