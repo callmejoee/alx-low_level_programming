@@ -23,7 +23,7 @@ char *_strchr(char *s, char c)
 		}
 		index++;
 	}
-	if (*s == '\0')
-		return (NULL);
+	if (*s == c)
+		return (s);
 	return ('\0');
 }
