@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <string.h>
 /**
  * main - entry point
  *
@@ -13,21 +13,25 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, j, sum = 0, len;
 
+	char *pChar;
 	if (argc == 1)
 		printf("0\n");
+
 	for (i = 1; i < argc; i++)
 	{
-		while(*argv[i] != '\0')
+		pChar = argv[i];
+		len = strlen(pChar);
+		for (j = 0; j < len; j++)
 		{
-			if (!isdigit(*argv[i]))
+			if (!isdigit(*(pChar + j)))
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
-			argv[i]++;
 		}
+
 		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
