@@ -19,10 +19,14 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]))
+		while(*argv[i] != '\0')
 		{
-			printf("Error");
-			return (1);
+			if (!isdigit(*argv[i]))
+			{
+				printf("Error");
+				return (1);
+			}
+			argv[i]++;
 		}
 		sum += atoi(argv[i]);
 	}
