@@ -4,7 +4,8 @@
 
 /**
  * main - entry point
- *
+ * @argc: argument count
+ * @argv: argument vector
  * Return: 0
  *
  */
@@ -26,7 +27,7 @@ int coins(int value)
 
 	if (value == 0)
 		return (0);
-	
+
 	for (i = 0; i < 5; i++)
 	{
 		while (arr[i] <= value)
