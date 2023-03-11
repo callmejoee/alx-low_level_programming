@@ -19,22 +19,24 @@ int main(int argc, char *argv[])
 
 	if (argc <= 1)
 		printf("0\n");
-
-	for (i = 1; i < argc; i++)
+	else 
 	{
-		pChar = argv[i];
-		len = strlen(pChar);
-		for (j = 0; j < len; j++)
+		for (i = 1; i < argc; i++)
 		{
-			if (!isdigit(*(pChar + j)))
+			pChar = argv[i];
+			len = strlen(pChar);
+			for (j = 0; j < len; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(*(pChar + j)))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-		}
 
-		sum += atoi(argv[i]);
+			sum += atoi(argv[i]);
+		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
