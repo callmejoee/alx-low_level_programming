@@ -3,14 +3,6 @@
 #include <string.h>
 
 /**
- * main - entry point
- * @argc: argument count
- * @argv: argument vector
- * Return: 0
- *
- */
-
-/**
  * coins - main functiopn
  *
  * @value: value of coins
@@ -41,6 +33,14 @@ int coins(int value)
 	return (count);
 }
 
+
+/**
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
+ *
+ */
 
 int main(int argc, char *argv[])
 {
