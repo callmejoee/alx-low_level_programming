@@ -9,12 +9,21 @@
  *
  */
 
+/**
+ * coins - main functiopn
+ *
+ * @value: value of coins
+ *
+ * Return: @count number of coins
+ */
+
 
 int coins(int value)
 {
 	int count = 0;
 	int  i;
 	int arr[] = {25, 10, 5, 2, 1};
+
 	if (value == 0)
 		return (0);
 	
