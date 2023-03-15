@@ -23,9 +23,7 @@ char *create_array(unsigned int size, char c)
 		ptr[i] = c;
 		i++;
 	}
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
+	if (!ptr)
+		return(NULL);
 	return (ptr);
 }
