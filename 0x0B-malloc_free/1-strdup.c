@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strdup - string duplicate
+ * _strdup - string duplicate
  *
  * @str: string to be duplicated
  *
