@@ -5,7 +5,7 @@
  *
  * @s: string
  *
- * Return: integer len
+ * Return: count
  */
 
 int _strlen_recursion(char *s)
