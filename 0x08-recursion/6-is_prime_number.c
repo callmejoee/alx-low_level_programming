@@ -1,5 +1,6 @@
 #include "main.h"
 
+int is_prime(int number, int index);
 /**
  * is_prime_number - function to check if prime
  *
@@ -8,7 +9,6 @@
  * Return: 1 if prome 0 if not
  *
  */
-int is_prime(int number, int index);
 
 int is_prime_number(int n)
 {
