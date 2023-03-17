@@ -1,5 +1,7 @@
 #include "main.h"
 
+int square_root(int, int);
+
 /**
  * _sqrt_recursion
  *
@@ -8,8 +10,6 @@
  * Return: the square root
  */
 
-int square_root(int, int);
-
 int _sqrt_recursion(int n)
 {
 	n = square_root(n, 1);
@@ -17,6 +17,16 @@ int _sqrt_recursion(int n)
 		return (-1);
 	return (n);
 }
+
+/**
+ * square_root - sub function
+ *
+ * @num: number
+ *
+ * @guess: index
+ *
+ * Return: return number
+ */
 
 int square_root(int num, int guess)
 {
