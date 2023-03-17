@@ -3,7 +3,7 @@
 /**
  * is_prime_number - function to check if prime
  *
- * @n: number
+ * @n: number to check
  *
  * Return: 1 if prome 0 if not
  *
@@ -17,7 +17,7 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime - function
+ * is_prime - function to check
  * @number: number
  *
  * @index: counter
