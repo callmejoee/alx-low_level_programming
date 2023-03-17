@@ -8,6 +8,8 @@
  * Return: the square root
  */
 
+int square_root(int, int);
+
 int _sqrt_recursion(int n)
 {
 	n = square_root(n, 1);
@@ -22,5 +24,5 @@ int square_root(int num, int guess)
 		return (0);
 	if (num == guess * guess)
 		return (guess);
-	square_root(num, guess + 1);
+	return (square_root(num, guess + 1));
 }
