@@ -29,7 +29,7 @@ int is_prime(int number, int index)
 {
 	if (number < index)
 		return (0);
-	if (number & index == 0)
-		return (1)
-	return (number, index + 1);
+	if (number % index == 0)
+		return (1);
+	return (is_prime(number, index + 1));
 }
