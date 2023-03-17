@@ -3,7 +3,7 @@
 int square_root(int, int);
 
 /**
- * _sqrt_recursion
+ * _sqrt_recursion - function to check rec
  *
  * @n: number
  *
