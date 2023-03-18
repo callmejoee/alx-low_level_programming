@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** check - check if palindrome
+/**
+ * check - check if palindrome
  *
  * @start: start of string
  *
@@ -25,7 +26,7 @@ int check(char *start, char *end)
  *
  * @s: string
  *
- * Return: 1 if palindrome else 0 
+ * Return: 1 if palindrome else 0
  *
  */
 
