@@ -18,16 +18,6 @@ char *str_concat(char *s1, char *s2)
 
 	len_one = strlen(s1);
 	len_two = strlen(s2);
-	if (s1 == NULL)
-	{
-		len_one = 0;
-		s1 = " ";
-	}
-	else if (s2 == NULL)
-	{
-		s2 = " ";
-		len_two = 0;
-	}
 	new_string = (char *)malloc((len_one + len_two + 1) * sizeof(char));
 	if (new_string == NULL)
 		return (NULL);
