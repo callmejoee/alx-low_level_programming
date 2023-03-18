@@ -15,7 +15,7 @@ int check(char *start, char *end)
 		return (0);
 	if (*start == '\0')
 		return (1);
-	check(start + 1, end - 1);
+	return (check(start + 1, end - 1));
 }
 
 
@@ -31,5 +31,5 @@ int check(char *start, char *end)
 
 int is_palindrome(char *s)
 {
-	return (check(s), s + strlen(s));
+	return (check(s, s + strlen(s + 1)));
 }
