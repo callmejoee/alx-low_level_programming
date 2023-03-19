@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * alloc_grid - function to initialize a 2d array
+ * alloc_grid - function to make a 2d array
  *
- * @width: first array
+ * @width: the array
+ * @height: the array inside the array
  *
- * @height: second array
+ * Return: 2d array
  *
- * Return: pointer to array
  */
 
 int **alloc_grid(int width, int height)
@@ -15,19 +15,16 @@ int **alloc_grid(int width, int height)
 	int i, j;
 	int **ptr;
 
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
 	ptr = malloc(width * sizeof(int *));
-	
-	for (i = 0; i < width; i++)
-	{
-		ptr[i] = malloc(height * sizeof(int));
-	}
 
 	for (i = 0; i < width; i++)
-	{
+		ptr = malloc(height * sizeof(int));
+
+	for (i = 0; i < width; i++)
 		for (j = 0; j < height; j++)
-		{
 			ptr[i][j] = 0;
-		}
-	}
 	return (ptr);
 }
