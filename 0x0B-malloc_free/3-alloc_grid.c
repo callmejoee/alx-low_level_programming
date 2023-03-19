@@ -10,7 +10,7 @@
  *
  */
 
-int **alloc_ptr(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **ptr, i, j;
 
