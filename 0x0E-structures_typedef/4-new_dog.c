@@ -7,7 +7,7 @@
  * @age: dog age
  * @owner: dog owner
  *
- * Return: pointer to dog struct
+ * Return: @new_dog
  *
  */
 
