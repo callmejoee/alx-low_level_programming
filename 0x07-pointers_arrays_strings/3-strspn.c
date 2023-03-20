@@ -15,26 +15,5 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int counter, i, j;
 
 	/**
-	 * while accept is not end of char
-	 * if accept [i] ==  s increment counter
-	 * increment i 
-	 */
-
-	i = 0;
-	counter = 1;
-	while (accept[i] != '\0')
-		{
-			j = 0;
-			while (s[j] != '\0')
-			{
-				if (accept[i] == s[j])
-				{
-					counter++;
-					break;
-				}
-				j++;
-			}
-			i++;
-		}
-	return (counter);
-}
+	 * for string check all the accept
+	 * if 
