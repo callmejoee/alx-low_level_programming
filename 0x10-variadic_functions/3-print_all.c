@@ -20,23 +20,26 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0' && format != NULL)
 	{
-		flag = 0;
 		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(ptr, int));
+				flag = 0;
 				break;
 			case 'i':
 				printf("%i", va_arg(ptr, int));
+				flag = 0;
 				break;
 			case 'f':
 				printf("%f", va_arg(ptr, double));
+				flag = 0;
 				break;
 			case 's':
 				temp = va_arg(ptr, char *);
 				if (temp == NULL)
 					temp = "(nil)";
 				printf("%s", temp);
+				flag = 0;
 				break;
 			default:
 				flag = 1;
