@@ -15,6 +15,7 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	va_list ptr;
 	char *temp;
+	int flag = 0;
 
 	va_start(ptr, format);
 
@@ -38,11 +39,10 @@ void print_all(const char * const format, ...)
 				else
 					printf("%s", temp);
 				break;
+			default:
+				flag = 1;
 		}
-		if (format[i + 1] != '\0' &&
-			(format[i] == 'c' || format[i] == 'i' ||
-			format[i] == 'f' || format[i] == 's'))
-
+		if (format[i + 1] != '\0' && flag = 0)
 			printf(", ");
 		i++;
 	}
