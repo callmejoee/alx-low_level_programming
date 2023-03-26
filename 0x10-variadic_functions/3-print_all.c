@@ -12,7 +12,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, flag = 0;
+	int i = 0, flag;
 	char *temp;
 	va_list ptr;
 
@@ -20,6 +20,7 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0' && format != NULL)
 	{
+		flag = 0;
 		switch (format[i])
 		{
 			case 'c':
