@@ -12,10 +12,9 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	va_list ptr;
+	int i = 0, flag = 0;
 	char *temp;
-	int flag = 0;
+	va_list ptr;
 
 	va_start(ptr, format);
 
@@ -35,9 +34,8 @@ void print_all(const char * const format, ...)
 			case 's':
 				temp = va_arg(ptr, char *);
 				if (temp == NULL)
-					printf("(nil)");
-				else
-					printf("%s", temp);
+					temp = "(nil)";
+				printf("%s", temp);
 				break;
 			default:
 				flag = 1;
