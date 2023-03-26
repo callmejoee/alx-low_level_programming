@@ -12,12 +12,13 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, flag;
+	int i;
+	int flag;
 	char *temp;
 	va_list ptr;
 
 	va_start(ptr, format);
-
+	i = 0;
 	while (format[i] != '\0' && format != NULL)
 	{
 		switch (format[i])
