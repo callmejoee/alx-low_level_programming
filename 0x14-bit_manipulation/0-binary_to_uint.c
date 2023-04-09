@@ -2,7 +2,6 @@
 #include <math.h>
 
 /**
- *
  * power - power function
  *
  * @a: base
@@ -25,7 +24,6 @@ int power(int a, int b)
 }
 
 /**
- *
  * binary_to_uint - function to convert binary number from string
  *
  * @b: binary string
