@@ -26,5 +26,4 @@ void print_binary(unsigned long int n)
 		else if (is_msb == 1 || i == 0)
 			_putchar('0');
 	}
-	_putchar('\n');
 }
