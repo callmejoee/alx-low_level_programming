@@ -11,7 +11,7 @@
 void print_binary(unsigned long int n)
 {
 	int i;
-	int is_msb = 0; /* flag to check if the bit is the most signifcant or not zero */
+	int is_msb = 0; /* check if the bit is the most signifcant or not zero */
 	unsigned long int length; /* how many bits is the length */
 
 	length = ((sizeof(unsigned long int)) * 8) - 1;
