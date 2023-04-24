@@ -2,57 +2,90 @@
 
 #define BUFFER_SIZE 1024
 
+/**
+ * check_error - function to check errors
+ *
+ * @error: number of the error
+ * @file_name: name of the file closed or opened
+ * @fd: file descriptor
+ *
+ * Return: void
+ *
+ */
+
+
+void check_error(int error, char *file_name, int fd)
+{
+	switch (error)
+	{
+		case 97:
+			fprintf(stderr, "Usage: cp file_from file_to\n");
+			exit(error);
+		case 98:
+			fprintf(stderr, "Error: Can't read from file %s\n", file_name);
+			exit(error);
+		case 99:
+			fprintf(stderr, "Error: Can't read from file %s\n", file_name);
+			exit(error);
+		case 100:
+			fprintf(stderr, "Error: Can't close fd %d\n", fd);
+			exit(error);
+	}
+}
+
+/**
+ * main - main functions
+ *
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return 0 (Success)
+ *
+ */
+
+
 int main(int argc, char *argv[])
 {
-	int fd, fp_one, fp_two; /* fp_one file from */ /* fp_two file to */
-	char *buffer;
+	int file_to, file_from;
+	int read, write;
+	int close;
+	char buffer[BUFFER_SIZE];
+
 
 	if (argc != 3)
+		check_error(97, NULL, 0);
+
+	file_from = open(argv[1], O_RDONLY);
+
+	if (file_from == -1)
+		check_error(98, argv[1], 0);
+
+	file_to = open(argv[2],  O_CREAT | O_TRUNC | O_WRONLY, 664);
+
+	if (file_to == -1)
+		check_error(99, argv[2], 0);
+
+	read = read(file_from, buffer, BUFFER_SIZE);
+
+	while (read != 0)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
-		return (97);
+		if (read == -1)
+			check_error(99, argv[1], 0);
+
+		write = write(file_to, buffer, read);
+
+		if (write == -1)
+			check_error(99, argv[2], 0);
 	}
 
-	fp_two = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 664);
+	close = close(file_from);
+	if (close == -1)
+		check_error(100, NULL, file_from);
 
-	/* O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH */
+	close = close(file_to);
+	if (close == -1)
+		check_error(100, NULL, file_to);
 
-	fp_one = open(argv[1], O_RDONLY);
-	
-	if (fp_one == -1)
-	{
-		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
-		return (98);
-	}
+	return (0);
 
-	if (fp_two == -1)
-	{
-		fprintf(stderr, "Error: Can't read from file %s\n", argv[2]);
-		return (99);
-	}
-
-
-	buffer = malloc(BUFFER_SIZE * sizeof(char));
-
-	read(fp_one, buffer, BUFFER_SIZE);
-
-	write(fp_two, buffer, BUFFER_SIZE);
-
-	free(buffer);
-
-	fd = close(fp_one);
-	if (fd == -1)
-	{	
-		fprintf(stderr, "Error: Can't close fd %d\n", fp_one);
-		return (100);
-	}
-
-	fd = close(fp_two);
-	if (fd == -1)
-	{	
-		fprintf(stderr, "Error: Can't close fd %d\n", fp_two);
-		return (100);
-	}
-
-	return (1);
 }
