@@ -47,8 +47,8 @@ void check_error(int error, char *file_name, int fd)
 int main(int argc, char *argv[])
 {
 	int file_to, file_from;
-	int read, write;
-	int close;
+	int read_file, write_file;
+	int close_file;
 	char buffer[BUFFER_SIZE];
 
 
@@ -65,25 +65,25 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 		check_error(99, argv[2], 0);
 
-	read = read(file_from, buffer, BUFFER_SIZE);
+	read_file = read(file_from, buffer, BUFFER_SIZE);
 
-	while (read != 0)
+	while (read_file != 0)
 	{
-		if (read == -1)
+		if (read_file == -1)
 			check_error(99, argv[1], 0);
 
-		write = write(file_to, buffer, read);
+		write_file = write(file_to, buffer, read_file);
 
-		if (write == -1)
+		if (write_file == -1)
 			check_error(99, argv[2], 0);
 	}
 
-	close = close(file_from);
-	if (close == -1)
+	close_file = close(file_from);
+	if (close_file == -1)
 		check_error(100, NULL, file_from);
 
-	close = close(file_to);
-	if (close == -1)
+	close_file = close(file_to);
+	if (close_file == -1)
 		check_error(100, NULL, file_to);
 
 	return (0);
