@@ -11,34 +11,28 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE* fp;
-	size_t bytes_written;
-	char *buffer;
+	int fp;
+	size_t bytes_written, len;
 
-	buffer = malloc(strlen(text_content) * sizeof(char));
-
-	if (buffer == NULL || filename == NULL)
+	if (filename == NULL)
 		return (-1);
 
-	fp = fopen(filename, "w+");
+	fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
-	if (fp == NULL)
-	{
-		free(buffer);
+	if (fp == -1)
 		return (-1);
-	}
 
-	bytes_written = fwrite(buffer, 1 , sizeof(text_content), fp);
-
-	if (bytes_written != strlen(text_content))
+	if (text_content != NULL)
 	{
-		free(buffer);
-		fclose(fp);
-		return (0);
+		len = strlen(text_content);
+		bytes_written = write(fp, text_content, len);
+		if (bytes_written == -1 || bytes_written != len)
+		{
+			close(fp);
+			return (-1);
+		}
 	}
-	free(buffer);
-	fclose(fp);
 
+	close(fp);
 	return (1);
-
 }
