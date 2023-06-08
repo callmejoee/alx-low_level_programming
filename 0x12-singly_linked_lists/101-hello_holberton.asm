@@ -1,18 +1,20 @@
-global _start
+section .data
+    str db "Hello, Holberton", 10, 0
 
 section .text
+    global main
 
-_start:
-  mov rax, 1        ;
-  mov rdi, 1        ;
-  mov rsi, msg      ;
-  mov rdx, msglen   ;
-  syscall           ;
+    extern printf
 
-  mov rax, 60       ;
-  mov rdi, 0        ;
-  syscall           ;
+main:
+    push rbp
+    mov rbp, rsp
 
-section .rodata
-  msg: db "Hello, Holberton\n", 10
-  msglen: equ $ - msg
+    lea rdi, [rel str]
+    xor eax, eax
+    call printf
+
+    mov rsp, rbp
+    pop rbp
+    xor eax, eax
+    ret
