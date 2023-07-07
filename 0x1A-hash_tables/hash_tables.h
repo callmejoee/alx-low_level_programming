@@ -1,3 +1,6 @@
+#ifndef HEADER
+#define HEADER
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -38,4 +41,4 @@ hash_table_t *hash_table_create(unsigned long int size);
 
 
 
-
+#endif
