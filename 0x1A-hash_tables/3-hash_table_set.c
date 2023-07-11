@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *new_node;
+	hash_node_t temp, *new_node;
 
 	if (key == NULL || *key == '\0' || ht == NULL || value == NULL)
 	{
@@ -31,6 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 
+
 	if (ht->array[index] == NULL)
 	{
 
@@ -44,8 +45,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	else
-	{
-		ht->array[0] = new_node;
-		return (0);
-	}
+   	{
+	        unsigned long int i;
+	        for (i = index + 1; i != index; i = (i + 1) % ht->size)
+	        {
+	            if (ht->array[i] == NULL)
+	            {
+	                ht->array[i] = new_node;
+	                return (1);
+	            }
+	            else if (strcmp(key, ht->array[i]->key) == 0)
+        	    {
+        	        strcpy(ht->array[i]->value, value);
+        	        return (1);
+        	    }
+       		}
+       		return (0); // Hash table is full
+    	}
 }
