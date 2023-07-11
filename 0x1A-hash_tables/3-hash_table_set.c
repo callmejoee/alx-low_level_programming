@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function to take hash table and key/ value pairs to set them
+ * hash_table_set - function to take hash table and key/value pairs to set them
  * @ht: hash table
  * @key: key
  * @value: value
