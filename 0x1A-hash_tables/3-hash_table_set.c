@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t temp, *new_node;
+	hash_node_t *new_node;
 
 	if (key == NULL || *key == '\0' || ht == NULL || value == NULL)
 	{
@@ -60,6 +60,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         	        return (1);
         	    }
        		}
-       		return (0); // Hash table is full
+       		return (0);
     	}
 }
