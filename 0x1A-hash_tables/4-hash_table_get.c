@@ -13,14 +13,16 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	int index;
+	hash_node_t *element;
 
-	index = hash_djb2(key);
+	index = hash_djb2((const unsigned char *) key) % ht->size;
 
-	hash_node_t *element = ht->array[index];
+
+       	element = ht->array[index];
 
 	if (element != NULL)
 	{
-		if (strcmp(element->key, key)
+		if (strcmp(element->key, key) == 0)
 				return (element->value);
 	}
 
