@@ -9,11 +9,11 @@
  *
  */
 
-void printArray(int arr[], int left, int right) 
+void printArray(int arr[], int left, int right)
 {
 	int i;
 
-	if (arr == NULL || left < 0 ||  left > right) 
+	if (arr == NULL || left < 0 ||  left > right)
 	{
 		printf("Invalid input.\n");
 		return;
@@ -31,8 +31,8 @@ void printArray(int arr[], int left, int right)
  * binarySearch - Binary search function
  *
  * @arr: Pointer to the sorted integer array to search.
- * @l: The leftmost index of the array to consider.
- * @r: The rightmost index of the array to consider.
+ * @left: The leftmost index of the array to consider.
+ * @right: The rightmost index of the array to consider.
  * @x: The value to search for.
  *
  * Return: The index of the value if found, otherwise -1.
@@ -64,7 +64,7 @@ int binarySearch(int arr[], int left, int right, int x)
  * @array: array ptr
  * @size: size of array
  * @value: the value to be searched
- * return: return index
+ * Return: return index
  */
 
 int binary_search(int *array, size_t size, int value)
