@@ -22,7 +22,11 @@ void printArray(int arr[], int left, int right)
 	printf("Searching in array: ");
 	for (i = left; i <= right; i++)
 	{
-		printf("%d ", arr[i]);
+		printf("%d", arr[i]);
+		if (i != right)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 }
